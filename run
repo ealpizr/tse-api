@@ -1,0 +1,3 @@
+#!/bin/bash
+
+go build -o bin/tse-api.o src/main.go && ./bin/tse-api.o
