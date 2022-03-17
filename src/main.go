@@ -11,5 +11,5 @@ func main() {
 	
 	app := fiber.New()
 	router.RegisterRoutes(app)
-	app.Listen(":80")
+	app.Listen(":" + port)
 }
