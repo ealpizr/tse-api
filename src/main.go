@@ -8,5 +8,5 @@ import (
 func main() {
 	app := fiber.New()
 	router.RegisterRoutes(app)
-	app.Listen(":3000")
+	app.Listen(":80")
 }
