@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	port := os.GetEnv("PORT")
+	port := os.Getenv("PORT")
 	
 	app := fiber.New()
 	router.RegisterRoutes(app)
