@@ -12,6 +12,17 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
+// @Summary      Query by ID
+// @Description  get string by ID
+// @Accept       json
+// @Produce      json
+// @Param        id   path      string  true  "ID"
+// @Success      200  {object}  models.Record
+// @Failure      400  {object}  httputil.HTTPError
+// @Failure      404  {object}  httputil.HTTPError
+// @Failure      500  {object}  httputil.HTTPError
+// @Router       /id [post]
+
 func FindByIDRequestHandler(c *fiber.Ctx) error {
 	r := new(models.Record)
 	c.BodyParser(r)

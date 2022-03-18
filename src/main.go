@@ -6,6 +6,9 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
+// @title		API Docs
+// @BasePath 	/
+
 func main() {
 	port := os.Getenv("PORT")
 	

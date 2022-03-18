@@ -12,6 +12,17 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
+// @Summary      Query by full name
+// @Description  get string by full name
+// @Accept       json
+// @Produce      json
+// @Param        fullName   path      string  true  "Full name"
+// @Success      200  {object}  models.Record
+// @Failure      400  {object}  httputil.HTTPError
+// @Failure      404  {object}  httputil.HTTPError
+// @Failure      500  {object}  httputil.HTTPError
+// @Router       /name [post]
+
 func FindByFullNameRequestHandler(c *fiber.Ctx) error {
 	r := new(models.Record)
 	c.BodyParser(r)
